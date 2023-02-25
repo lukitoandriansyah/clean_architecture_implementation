@@ -1,4 +1,8 @@
 package jav002.core.category.usecase;
 
-public class CreateCategoryUseCase {
+import jav002.core.category.Category;
+import jav002.core.category.exception.CategoryAlreadyExistException;
+
+public interface CreateCategoryUseCase {
+    public void execute(Category category) throws CategoryAlreadyExistException;
 }
