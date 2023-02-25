@@ -1,4 +1,19 @@
 package jav002.core.category.usecase;
 
-public class CreateCategoryUseCaseImpl {
+import jav002.core.category.Category;
+import jav002.core.category.exception.CategoryAlreadyExistException;
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+public class CreateCategoryUseCaseImpl implements CreateCategoryUseCase{
+
+    private final CategoryRepositoryService categoryRepositoryService;
+
+    @Override
+    public void execute(Category category) throws CategoryAlreadyExistException {
+        if (categoryRepositoryService.doesCategoryNameExists(category.getName())){
+            throw new CategoryAlreadyExistException();
+        }
+        categoryRepositoryService.saveCategory(category);
+    }
 }
