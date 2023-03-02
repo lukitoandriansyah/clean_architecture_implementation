@@ -1,7 +1,7 @@
 package jav002.core.category.usecase;
 
 import jav002.core.category.ports.CategoryRepositoryService;
-import jav002.core.category.Category
+import jav002.core.category.Category;
 import lombok.AllArgsConstructor;
 
 import java.util.Collection;
