@@ -15,6 +15,8 @@
     <description>core</description>
     <properties>
         <java.version>19</java.version>
+        <lombok.version>1.18.8</lombok.version>
+        <swagger2.version>2.8.0</swagger2.version>
     </properties>
     <dependencies>
         <dependency>
@@ -51,9 +53,16 @@
             <artifactId>lombok</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+            <version>2.0.2</version>
         </dependency>
+        <dependency>
+            <groupId>jakarta.inject</groupId>
+            <artifactId>jakarta.inject-api</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>
