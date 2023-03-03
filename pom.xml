@@ -8,6 +8,7 @@
 		<version>3.0.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+	<packaging>pom</packaging>
 	<groupId>jav002</groupId>
 	<artifactId>clean_architecture_implementation</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -65,5 +66,10 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<modules>
+		<module>infrastructure</module>
+		<module>core</module>
+	</modules>
 
 </project>
