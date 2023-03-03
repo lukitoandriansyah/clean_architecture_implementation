@@ -2,6 +2,7 @@ package jav002.core.category.usecase;
 
 import jav002.core.category.Category;
 import jav002.core.category.exception.CategoryAlreadyExistException;
+import jav002.core.category.ports.CategoryRepositoryService;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
