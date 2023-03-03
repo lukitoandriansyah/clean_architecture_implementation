@@ -1,6 +1,6 @@
 package jav002.core.category.ports;
 
-import jdk.jfr.Category;
+import jav002.core.category.Category;
 
 import java.util.Collection;
 
