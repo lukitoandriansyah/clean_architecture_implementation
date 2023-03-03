@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 
 import java.util.Collection;
 import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 @AllArgsConstructor
 public class CategoryServiceImpl implements CategoryRepositoryService {
@@ -18,7 +19,7 @@ public class CategoryServiceImpl implements CategoryRepositoryService {
     @Override
     public Collection<Category> getAllCategories() {
         return categoryRepository.findAll().stream().map(category->categoryRepositoryConverter.mapToEntity(category))
-                .collect(Collector.toList());
+                .collect(Collectors.toList());
     }
 
     @Override
