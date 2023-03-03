@@ -21,7 +21,7 @@ import java.util.Collection;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping(RestConstants.APPLICATION_NAME + RestConstants.API_VERSION_1+ RestConstants.RESOURCE_CATEGORY)
+@RequestMapping(RestConstants.APPLICATION_NAME + RestConstants.API_VERSION+ RestConstants.RESOURCE_CATEGORY)
 @RequiredArgsConstructor
 public class CategoryControllerImpl implements CategoryController {
     private final GetAllCategoriesUseCase getAllCategoriesUseCase;
@@ -29,7 +29,7 @@ public class CategoryControllerImpl implements CategoryController {
     private final CategoryRestConverter categoryRestConverter;
 
     public NetflixResponses<Collection<CategoryRest>> getCategories() throws NetflixException{
-        return new NetflixResponses<>(CommonConstants.SUCCES, String.valueOf(HttpStatus.OK), CommonConstants.OK,
+        return new NetflixResponses<>(CommonConstants.SUCCESS, String.valueOf(HttpStatus.OK), CommonConstants.OK,
                 getAllCategoriesUseCase.execute().stream().map(category -> categoryRestConverter.mapToRest(category))
                         .collect(Collectors.toList()));
     }
