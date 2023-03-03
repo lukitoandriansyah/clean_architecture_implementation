@@ -1,7 +1,7 @@
 package jav002.infrastructure.shared.exceptions;
 
 public abstract class NetflixException extends Exception {
-    private static final longserialVersionUID = -7482635401716007171L;
+    private static final long serialVersionUID = -7482635401716007171L;
     private final int code;
 
     public NetflixException(final int code, final String message){
